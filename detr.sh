@@ -2,5 +2,5 @@
 curdir=`pwd`
 cd Deformable-DETR/
 pip install -r requirements.txt
-cd models/ops
+cd /content/Parallel_Dense_Video_Captioning_Custom/Deformable-DETR/models/ops
 python setup.py install
