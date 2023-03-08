@@ -4,3 +4,6 @@
 [submodule "densevid_eval3/pycocoevalcap"]
 	path = densevid_eval3/pycocoevalcap
 	url = https://github.com/salaniz/pycocoevalcap.git
+[submodule "densevid_eval3/densevid_eval3/pycocoevalcap"]
+	path = densevid_eval3/densevid_eval3/pycocoevalcap
+	url = https://github.com/salaniz/pycocoevalcap.git
