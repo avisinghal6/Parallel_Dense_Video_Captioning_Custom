@@ -1,4 +1,3 @@
-save*
 *.hdf5
 *.npy
 data/anet/features/c3d
