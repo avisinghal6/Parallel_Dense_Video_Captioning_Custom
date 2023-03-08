@@ -85,7 +85,11 @@ def train(opt):
     # Build model
 
     model, criterion, postprocessors = build(opt)
+    loaded_pth = torch.load("save/model/model-best.pth", map_location=opt.device)
+    model.load_state_dict(loaded_pth['model'], strict=True)
     model.translator = train_dataset.translator
+
+    
     model.train()
 
     # Recover the parameters
