@@ -16,3 +16,4 @@ joblib
 tqdm
 google_trans_new
 ffmpeg
+gdown
