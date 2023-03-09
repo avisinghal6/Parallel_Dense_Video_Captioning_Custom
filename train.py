@@ -290,7 +290,7 @@ def train(opt):
             saved_info['history'] = {'val_result_history': val_result_history,
                                      'loss_history': loss_history,
                                      'lr_history': lr_history,
-                                     # 'query_matched_fre_hist': query_matched_fre_hist,
+                                     # 'query_matched_fre_hist':  query_matched_fre_hist,
                                      }
             with open(os.path.join(save_folder, 'info.json'), 'w') as f:
                 json.dump(saved_info, f)
