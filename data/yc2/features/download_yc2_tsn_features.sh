@@ -5,9 +5,9 @@
 #wget http://youcook2.eecs.umich.edu/static/dat/yc2_densecap/validation_feat_yc2.tar.gz
 #wget http://youcook2.eecs.umich.edu/static/dat/yc2_densecap/testing_feat_yc2.tar.gz
 
-tar xvzf training_feat_yc2.tar.gz
-tar xvzf validation_feat_yc2.tar.gz
-tar xvzf testing_feat_yc2.tar.gz
+tar xvzf /kaggle/input/youcook2/testing_feat_yc2
+tar xvzf /kaggle/input/youcook2/training_feat_yc2
+tar xvzf /kaggle/input/youcook2/validation_feat_yc2
 mkdir resnet_bn
 mv testing/* resnet_bn
 mv training/* resnet_bn
