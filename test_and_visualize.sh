@@ -55,20 +55,20 @@ python video_backbone/TSP/data/generate_metadata_csv.py --video-folder $DATA_PAT
 FEATURE_DIR=$OUTPUT_FOLDER/${RELEASED_CHECKPOINT}_stride_${STRIDE}/
 mkdir -p $OUTPUT_DIR
 
-echo "START EXTRACT VIDEO FEATURES"
-python video_backbone/TSP/extract_features/extract_features.py \
---data-path $DATA_PATH \
---metadata-csv-filename $METADATA_CSV_FILENAME \
---released-checkpoint $RELEASED_CHECKPOINT \
---stride $STRIDE \
---shard-id $SHARD_ID \
---num-shards $NUM_SHARDS \
---device $DEVICE \
---output-dir $FEATURE_DIR \
---workers $WORKER_NUM
+# echo "START EXTRACT VIDEO FEATURES"
+# python video_backbone/TSP/extract_features/extract_features.py \
+# --data-path $DATA_PATH \
+# --metadata-csv-filename $METADATA_CSV_FILENAME \
+# --released-checkpoint $RELEASED_CHECKPOINT \
+# --stride $STRIDE \
+# --shard-id $SHARD_ID \
+# --num-shards $NUM_SHARDS \
+# --device $DEVICE \
+# --output-dir $FEATURE_DIR \
+# --workers $WORKER_NUM
 
 echo "START Dense-Captioning"
 python eval.py --eval_mode test --eval_save_dir $OUTPUT_FOLDER --eval_folder generated_captions --eval_model_path $PDVC_MODEL_PATH --test_video_feature_folder $FEATURE_DIR --test_video_meta_data_csv_path $METADATA_CSV_FILENAME
 
-echo "START VISUALIZATION"
-python visualization/visualization.py --input_mp4_folder $DATA_PATH --output_mp4_folder  $OUTPUT_FOLDER/vis_videos --dvc_file $OUTPUT_FOLDER/generated_captions/dvc_results.json --output_language $OUTPUT_LANGUAGE
+# echo "START VISUALIZATION"
+# python visualization/visualization.py --input_mp4_folder $DATA_PATH --output_mp4_folder  $OUTPUT_FOLDER/vis_videos --dvc_file $OUTPUT_FOLDER/generated_captions/dvc_results.json --output_language $OUTPUT_LANGUAGE

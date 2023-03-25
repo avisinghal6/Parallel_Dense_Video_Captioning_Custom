@@ -65,7 +65,7 @@ def main(opt):
 
     if opt.eval_mode == 'test':
         opt.eval_caption_file = create_fake_test_caption_file(opt.test_video_meta_data_csv_path)
-        opt.visual_feature_folder = opt.test_video_feature_folder
+        # opt.visual_feature_folder = opt.test_video_feature_folder
 
     val_dataset = PropSeqDataset(opt.eval_caption_file,
                                  opt.visual_feature_folder,
