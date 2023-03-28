@@ -17,3 +17,5 @@ tqdm
 google_trans_new
 ffmpeg
 gdown
+colorlog
+av
