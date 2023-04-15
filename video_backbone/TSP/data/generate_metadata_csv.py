@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--video-folder', required=True, type=str,
                       help='Path to folder containing the raw video files')
-    parser.add_argument('--ext', default='mp4', type=str,
+    parser.add_argument('--ext', default='webm', type=str,
                       help='Video files extension (default: mp4)')
     parser.add_argument('--output-csv', required=True, type=str,
                       help='Where to save the metadata CSV file')
