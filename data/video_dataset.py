@@ -346,12 +346,12 @@ def get_feats(key, vf_type, vf_folder, data_norm=False):
         feat_dim = 2048
         MEAN = 0.41634243404998694
         VAR = 0.2569392081183313
-        path = os.path.join(vf_folder, key[2:13] + '_resnet.npy')
+        path = os.path.join(vf_folder, key[0:13] + '_resnet.npy')
     elif vf_type == 'bn':
         feat_dim = 1024
         MEAN = 0.8945046635916155
         VAR = 3.6579982046018844
-        path = os.path.join(vf_folder, key[2:13] + '_bn.npy')
+        path = os.path.join(vf_folder, key[0:13] + '_bn.npy')
     elif vf_type == 'tsn_100':
         feat_dim = 400
         path = os.path.join(vf_folder, key[0:13] + '.csv')
