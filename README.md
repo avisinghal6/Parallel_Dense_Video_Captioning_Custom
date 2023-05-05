@@ -1,3 +1,6 @@
+For our project, we modified the training part of the code. Existing code using TSP features for training, we used TSN features for finetuning a pre-existing model offered by the original authors. We finetuned on youcook2 dataset. We had to understand the code functionality to know which part to modify to ensure correct finetuning, we finetuned the model for 30 epochs after which we did not see a decrease in loss. After finetuning the model, we further modified the code so that it can generate time stamp of events for the videos given by us. That code is present in running_pdvc.ipynb
+
+
 #  PDVC
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/end-to-end-dense-video-captioning-with/dense-video-captioning-on-youcook2)](https://paperswithcode.com/sota/dense-video-captioning-on-youcook2?p=end-to-end-dense-video-captioning-with)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/end-to-end-dense-video-captioning-with/dense-video-captioning-on-activitynet)](https://paperswithcode.com/sota/dense-video-captioning-on-activitynet?p=end-to-end-dense-video-captioning-with)
